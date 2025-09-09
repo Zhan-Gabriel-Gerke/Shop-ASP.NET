@@ -42,5 +42,16 @@ namespace Shop.ApplicationServices.Services
                 .FirstOrDefaultAsync(x => x.Id == id);
             return result;
         }
+
+        public async Task<SpaceShip> Delete(Guid id)
+        {
+            //you need to do that by yourself
+            var spaceship = await _context.SpaceShips
+                .FirstOrDefaultAsync(x => x.Id == id);
+            _context.SpaceShips.Remove(spaceship);
+            await _context.SaveChangesAsync();
+
+            return spaceship;
+        }
     }
 }

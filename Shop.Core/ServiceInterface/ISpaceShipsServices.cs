@@ -11,5 +11,7 @@ namespace Shop.Core.ServiceInterface
     public interface ISpaceShipsServices
     {
         Task<SpaceShip> Create(SpaceShipDto dto);
+        Task<SpaceShip> DetailAsync(Guid id);
+        Task<SpaceShip> Delete(Guid id);
     }
 }
