@@ -2,6 +2,7 @@
 using Shop.Data;
 using Shop.Core.Dto;
 using Shop.Core.ServiceInterface;
+using Microsoft.EntityFrameworkCore;
 
 namespace Shop.ApplicationServices.Services
 {
@@ -33,6 +34,13 @@ namespace Shop.ApplicationServices.Services
             await _context.SaveChangesAsync();
 
             return spaceship;
+        }
+
+        public async Task <SpaceShip> DetailAsync(Guid id)
+        {
+            var result = await _context.SpaceShips
+                .FirstOrDefaultAsync(x => x.Id == id);
+            return result;
         }
     }
 }
