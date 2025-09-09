@@ -39,13 +39,13 @@ namespace Shop.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            SpaceShipCreateModel result = new();
+            SpaceShipCreateUpdateViewModel result = new();
 
-            return View("Create", result);
+            return View("CreateUpdate", result);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(SpaceShipCreateModel vm)
+        public async Task<IActionResult> Create(SpaceShipCreateUpdateViewModel vm)
         {
             var dto = new SpaceShipDto()
             {
@@ -67,8 +67,7 @@ namespace Shop.Controllers
             {
                 return RedirectToAction(nameof(Index));
             }
-
-            return View(result);
+            return RedirectToAction(nameof(Index));
         }
 
         [HttpGet]
@@ -105,6 +104,55 @@ namespace Shop.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return RedirectToAction(nameof(Index));
+        }
+        [HttpGet]
+        public async Task<IActionResult> Update(Guid id)
+        {
+            var spaceship = await _spaceShipsServices.DetailAsync(id);
+
+            if (spaceship == null)
+            {
+                return NotFound();
+            }
+
+            var vm = new SpaceShipCreateUpdateViewModel();
+
+            vm.Id = spaceship.Id;
+            vm.Name = spaceship.Name;
+            vm.TypeName = spaceship.TypeName;
+            vm.BuiltDate = spaceship.BuiltDate;
+            vm.Crew = spaceship.Crew;
+            vm.EnginePower = spaceship.EnginePower;
+            vm.Passengers = spaceship.Passengers;
+            vm.InnerVolume = spaceship.InnerVolume;
+            vm.CreatedAt = spaceship.CreateAt;
+            vm.ModifiedAt = spaceship.ModefiedAt;
+
+            return View("CreateUpdate", vm);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Update(SpaceShipCreateUpdateViewModel vm)
+        {
+            var dto = new SpaceShipDto()
+            {
+                Id = vm.Id,
+                Name = vm.Name,
+                TypeName = vm.TypeName,
+                BuiltDate = vm.BuiltDate,
+                Crew = vm.Crew,
+                EnginePower = vm.EnginePower,
+                Passengers = vm.Passengers,
+                InnerVolume = vm.InnerVolume,
+                CreatedAt = vm.CreatedAt,
+                ModifiedAt = vm.ModifiedAt
+            };
+            var result = await _spaceShipsServices.Update(dto);
+
+            if (result == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            return RedirectToAction(nameof(Index), vm);
         }
     }
 }
