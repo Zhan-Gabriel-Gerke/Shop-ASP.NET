@@ -162,7 +162,7 @@ namespace Shop.Controllers
             {
                 return NotFound();
             }
-            var vm = new SpaceShipDeleteViewModel();
+            var vm = new SpaceShipDetailViewModel();
 
             vm.Id = spaceship.Id;
             vm.Name = spaceship.Name;

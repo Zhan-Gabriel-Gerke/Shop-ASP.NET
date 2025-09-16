@@ -18,7 +18,7 @@ namespace Shop
             //s
             builder.Services.AddDbContext<ShopContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
-                    b => b.MigrationsAssembly("Shop")));
+                    b => b.MigrationsAssembly("Shop.Data")));
 
             builder.Services.AddScoped<ISpaceShipsServices, SpaceShipsServices>();
 

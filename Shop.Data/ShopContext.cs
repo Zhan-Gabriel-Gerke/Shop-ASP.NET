@@ -10,10 +10,7 @@ namespace Shop.Data
         {
         }
 
-        protected ShopContext()
-        {
-        }
-
         public DbSet<SpaceShip> SpaceShips { get; set; }
+        public DbSet<FileToApi> FileToApis { get; set; }
     }
 }
