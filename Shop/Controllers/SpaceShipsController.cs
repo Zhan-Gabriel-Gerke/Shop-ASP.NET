@@ -154,5 +154,28 @@ namespace Shop.Controllers
             }
             return RedirectToAction(nameof(Index), vm);
         }
+        [HttpGet]
+        public async Task<IActionResult> Details(Guid id)
+        {
+            var spaceship = await _spaceShipsServices.DetailAsync(id);
+            if (spaceship == null)
+            {
+                return NotFound();
+            }
+            var vm = new SpaceShipDeleteViewModel();
+
+            vm.Id = spaceship.Id;
+            vm.Name = spaceship.Name;
+            vm.TypeName = spaceship.TypeName;
+            vm.BuiltDate = spaceship.BuiltDate;
+            vm.Crew = spaceship.Crew;
+            vm.EnginePower = spaceship.EnginePower;
+            vm.Passengers = spaceship.Passengers;
+            vm.InnerVolume = spaceship.InnerVolume;
+            vm.CreatedAt = spaceship.CreateAt;
+            vm.ModifiedAt = spaceship.ModefiedAt;
+
+            return View(vm);
+        }
     }
 }
