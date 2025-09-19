@@ -1,6 +1,10 @@
 using Microsoft.EntityFrameworkCore;
-using Shop.ApplicationServices.Services;
+using Shop.ApplicationServices.Services.Kindergarten;
+using Shop.ApplicationServices.Services.SpaceShips;
+using Shop.Core.Domain.Kindergartens;
+using Shop.Core.ServiceInterface.Kindergarten;
 using Shop.Core.ServiceInterface.SpaceShips;
+using Shop.Data.Kindergarten;
 using Shop.Data.SpaceShips;
 
 namespace Shop
@@ -16,11 +20,19 @@ namespace Shop
 
             //builder.Services.AddScoped< SpaceShipServices>();
             //s
-            builder.Services.AddDbContext<ShopContext>(option =>
-                option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+
+            builder.Services.AddScoped<ISpaceShipsServices, ApplicationServices.Services.SpaceShips.SpaceShipsServices>();
+
+            builder.Services.AddScoped<IKindergartensServices, Shop.ApplicationServices.Services.Kindergarten.KindergartenServices>();
+
+            builder.Services.AddDbContext<ShopContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
                     b => b.MigrationsAssembly("Shop.Data")));
 
-            builder.Services.AddScoped<ISpaceShipsServices, SpaceShipsServices>();
+            builder.Services.AddDbContext<KindergartenContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+                    b => b.MigrationsAssembly("Shop.Data")));
+
 
             var app = builder.Build();
 

@@ -1,12 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Shop.Core.ServiceInterface.SpaceShips;
-using Shop.Core.Dto.Kindergarten;
 using Shop.Core.Dto.SpaceShips;
 using Shop.Data.SpaceShips;
-using Shop.Data.Kindergarten;
 using Shop.Core.Domain.SpaceShips;
 
-namespace Shop.ApplicationServices.Services
+namespace Shop.ApplicationServices.Services.SpaceShips
 {
     public class SpaceShipsServices : ISpaceShipsServices
     {

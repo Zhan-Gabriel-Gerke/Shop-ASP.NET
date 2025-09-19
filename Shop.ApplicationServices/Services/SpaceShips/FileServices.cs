@@ -4,7 +4,7 @@ using Shop.Core.Dto.SpaceShips;
 using Shop.Data.SpaceShips;
 using Shop.Core.Domain.SpaceShips;
 
-namespace Shop.ApplicationServices.Services
+namespace Shop.ApplicationServices.Services.SpaceShips
 {
     public class FileServices : IFileServices
     {
@@ -32,7 +32,7 @@ namespace Shop.ApplicationServices.Services
                     {
                         file.CopyTo(fileStream); // или CopyToAsync для асинхронного сохранения
 
-                        FileToApi path = new FileToApi
+                        FileToApiSpaceShip path = new FileToApiSpaceShip
                         {
                             Id = Guid.NewGuid(),
                             ExistingFilePath = uniqueFileName,

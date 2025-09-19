@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Shop.Models.Kindergarten.KindergartenIndexViewModel>
+<div>
+    <a asp-action="create" asp-controller="Kindergartens" type="submit" class="btn btn-primary">Create</a>
+</div>
+<div class="h1">
+    Kindergartend
+</div>
+<form action="/" method="post">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Nr</th>
+                <th scope="col">GroupName</th>
+                <th scope="col">ChildrenCount</th>
+                <th scope="col">KindergartenName</th>
+                <th scope="col">TeacherName</th>
+                <th scope="col">Details</th>
+                <th score="col">Update</th>
+                <th score="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int index = 1;
+            }
+            @foreach (var kindergartens in Model)
+            {
+                <tr>
+                    <td>@index</td>
+                    <td>@kindergartens.GroupName</td>
+                    <td>@kindergartens.ChildrenCount</td>
+                    <td>@kindergartens.KindergartenName</td>
+                    <td>@kindergartens.TeacherName</td>
+                    <td>
+                        <a asp-action="details" asp-controller="Kindergartens" asp-route-id="@kindergartens.Id" class="btn btn-primary">Details</a>
+                    </td>
+                    <td>
+                        <a asp-action="update" asp-controller="Kindergartens" asp-route-id="@kindergartens.Id" class="btn btn-outline-primary">Update</a>
+                    </td>
+                    <td>
+                        <a asp-action="delete" asp-controller="Kindergartens" asp-route-id="@kindergartens.Id" class="btn btn-outline-danger">Delete</a>
+                    </td>
+                </tr>
+                index++;
+            }
+        </tbody>
+    </table>
+</form>

@@ -23,6 +23,7 @@ C:\Users\zange\source\repos\ShopGeneral\Shop.Core\obj\Debug\net9.0\ref\Shop.Core
 C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Core\bin\Debug\net9.0\Shop.Core.deps.json
 C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Core\bin\Debug\net9.0\Shop.Core.dll
 C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Core\bin\Debug\net9.0\Shop.Core.pdb
+C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Core\obj\Debug\net9.0\Shop.Core.csproj.AssemblyReference.cache
 C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Core\obj\Debug\net9.0\Shop.Core.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Core\obj\Debug\net9.0\Shop.Core.AssemblyInfoInputs.cache
 C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Core\obj\Debug\net9.0\Shop.Core.AssemblyInfo.cs

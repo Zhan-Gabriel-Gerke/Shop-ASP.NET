@@ -1,24 +1,21 @@
 ﻿using Microsoft.Extensions.Hosting;
-using Shop.Core.ServiceInterface.SpaceShips;
-using Shop.Core.Dto.Kindergarten;
-using Shop.Core.Dto.SpaceShips;
-using Shop.Data.SpaceShips;
-using Shop.Data.Kindergarten;
-using Shop.Core.Domain.SpaceShips;
 using Shop.Core.Domain.Kindergarten;
+using Shop.Core.Dto.Kindergarten;
+using Shop.Core.ServiceInterface.Kindergarten;
+using Shop.Data.Kindergarten;
 
-namespace Shop.ApplicationServices.Services
+namespace Shop.ApplicationServices.Services.Kindergarten
 {
     public class FileServices : IFileServices
     {
-        private readonly ShopContext _context;
+        private readonly KindergartenContext _context;
         private readonly IHostEnvironment _webHost;
 
-        public FileServices(ShopContext context, IHostEnvironment _webHost)
+        public FileServices(KindergartenContext context, IHostEnvironment _webHost)
         {
             _context = context;
         }
-        public void FilesToApi(SpaceShipDto dto, SpaceShip spaceShip)
+        public void FilesToApi(KindergartenDto dto, Shop.Core.Domain.Kindergartens.Kindergarten kindergarten)
         {
             if (dto.Files != null && dto.Files.Count > 0)
             {
@@ -35,11 +32,11 @@ namespace Shop.ApplicationServices.Services
                     {
                         file.CopyTo(fileStream); // или CopyToAsync для асинхронного сохранения
 
-                        FileToApi path = new FileToApi
+                        FileToApiKindergarten path = new FileToApiKindergarten
                         {
                             Id = Guid.NewGuid(),
                             ExistingFilePath = uniqueFileName,
-                            SpaceShipId = spaceShip.Id
+                            KindergartenId = kindergarten.Id
                         };
 
                         _context.FileToApis.AddAsync(path);

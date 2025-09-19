@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Shop.Data.Kindergarten;
+using Shop.Data.SpaceShips;
 
 #nullable disable
 
-namespace Shop.Data.Migrations
+namespace Shop.Data.Migrations.Shop
 {
     [DbContext(typeof(ShopContext))]
     partial class ShopContextModelSnapshot : ModelSnapshot
@@ -22,7 +22,7 @@ namespace Shop.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Shop.Core.Domain.FileToApi", b =>
+            modelBuilder.Entity("Shop.Core.Domain.SpaceShips.FileToApiSpaceShip", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -36,10 +36,10 @@ namespace Shop.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("FileToApis");
+                    b.ToTable("FileToApiSpaceShip");
                 });
 
-            modelBuilder.Entity("Shop.Core.Domain.SpaceShip", b =>
+            modelBuilder.Entity("Shop.Core.Domain.SpaceShips.SpaceShip", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()

@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
-using Shop.Core.Domain;
+using Shop.Core.Domain.SpaceShips;
 
 namespace Shop.Core.Dto.SpaceShips
 {

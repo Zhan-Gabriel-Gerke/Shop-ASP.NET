@@ -29,6 +29,7 @@ C:\Users\zange\source\repos\ShopGeneral\Shop.Data\obj\Debug\net9.0\refint\Shop.D
 C:\Users\zange\source\repos\ShopGeneral\Shop.Data\obj\Debug\net9.0\Shop.Data.pdb
 C:\Users\zange\source\repos\ShopGeneral\Shop.Data\obj\Debug\net9.0\ref\Shop.Data.dll
 C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Data\bin\Debug\net9.0\Shop.Data.deps.json
+C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Data\bin\Debug\net9.0\Shop.Data.runtimeconfig.json
 C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Data\bin\Debug\net9.0\Shop.Data.dll
 C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Data\bin\Debug\net9.0\Shop.Data.pdb
 C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Data\bin\Debug\net9.0\Shop.Core.dll
@@ -43,6 +44,5 @@ C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Data\obj\Debug\net9.0\Shop.Data.cs
 C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Data\obj\Debug\net9.0\Shop.Data.dll
 C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Data\obj\Debug\net9.0\refint\Shop.Data.dll
 C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Data\obj\Debug\net9.0\Shop.Data.pdb
-C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Data\obj\Debug\net9.0\ref\Shop.Data.dll
-C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Data\bin\Debug\net9.0\Shop.Data.runtimeconfig.json
 C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Data\obj\Debug\net9.0\Shop.Data.genruntimeconfig.cache
+C:\Users\zange\source\repos\Shop-ASP.NET\Shop.Data\obj\Debug\net9.0\ref\Shop.Data.dll

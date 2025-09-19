@@ -11,7 +11,7 @@ using Shop.Data.Kindergarten;
 
 namespace Shop.Data.Migrations
 {
-    [DbContext(typeof(ShopContext))]
+    [DbContext(typeof(KindergartenContext))]
     [Migration("20250916122216_FileToApplication")]
     partial class FileToApplication
     {

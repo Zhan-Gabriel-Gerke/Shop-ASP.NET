@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Http;
+using Shop.Core.Domain.Kindergarten;
 
-namespace Shop.Core.Domain.Kindergarten
+namespace Shop.Core.Dto.Kindergarten
 {
-    internal class Kindergarten
+    public class KindergartenDto
     {
         public Guid? Id { get; set; }
         public string? GroupName { get; set; }
@@ -15,5 +12,8 @@ namespace Shop.Core.Domain.Kindergarten
         public string? TeacherName { get; set; }
         public DateTime? CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
+        public List<IFormFile> Files { get; set; }
+        public IEnumerable<FileToApiDto> FileToApiDtos { get; set; }
+            = new List<FileToApiDto>();
     }
 }
