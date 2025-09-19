@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Shop.Models.SpaceShips;
-using Shop.Data;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
-using Shop.Core.ServiceInterface;
-using Shop.Core.Dto;
+using Shop.Core.Dto.SpaceShips;
+using Shop.Core.ServiceInterface.SpaceShips;
+using Shop.Data.SpaceShips;
 
 namespace Shop.Controllers
 {

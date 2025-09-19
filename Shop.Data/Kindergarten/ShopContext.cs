@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Shop.Core.Domain;
+using Shop.Core.Domain.Kindergarten;
+using Shop.Core.Domain.SpaceShips;
 
-namespace Shop.Data
+namespace Shop.Data.Kindergarten
 {
     public class ShopContext : DbContext
     {

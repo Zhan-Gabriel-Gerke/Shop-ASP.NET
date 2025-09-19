@@ -1,4 +1,4 @@
-﻿namespace Shop.Core.Domain
+﻿namespace Shop.Core.Domain.SpaceShips
 {
     public class SpaceShip
     {

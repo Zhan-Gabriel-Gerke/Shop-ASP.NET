@@ -1,7 +1,7 @@
-using Shop.Data;
 using Microsoft.EntityFrameworkCore;
-using Shop.Core.ServiceInterface;
 using Shop.ApplicationServices.Services;
+using Shop.Core.ServiceInterface.SpaceShips;
+using Shop.Data.SpaceShips;
 
 namespace Shop
 {

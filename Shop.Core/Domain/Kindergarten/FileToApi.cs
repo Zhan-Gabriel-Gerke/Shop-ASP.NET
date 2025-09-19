@@ -1,4 +1,4 @@
-﻿namespace Shop.Core.Domain
+﻿namespace Shop.Core.Domain.Kindergarten.Kindergarten
 {
     public class FileToApi
     {

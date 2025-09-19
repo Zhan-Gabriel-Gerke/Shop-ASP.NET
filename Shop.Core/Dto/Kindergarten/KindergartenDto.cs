@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Shop.Core.Domain;
 
-namespace Shop.Core.Dto
+namespace Shop.Core.Dto.Kindergarten
 {
     public class SpaceShipDto
     {

@@ -1,9 +1,11 @@
-﻿
-using Shop.Core.Dto;
-using Shop.Data;
-using Microsoft.Extensions.Hosting;
-using Shop.Core.Domain;
-using Shop.Core.ServiceInterface;
+﻿using Microsoft.Extensions.Hosting;
+using Shop.Core.ServiceInterface.SpaceShips;
+using Shop.Core.Dto.Kindergarten;
+using Shop.Core.Dto.SpaceShips;
+using Shop.Data.SpaceShips;
+using Shop.Data.Kindergarten;
+using Shop.Core.Domain.SpaceShips;
+using Shop.Core.Domain.Kindergarten;
 
 namespace Shop.ApplicationServices.Services
 {
